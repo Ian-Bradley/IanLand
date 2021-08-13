@@ -2,7 +2,7 @@
   "name": "ianland",
   "version": "1.0.0",
   "description": "Personal website for Ian Bradley",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,18 @@
   "bugs": {
     "url": "https://github.com/IA-n7/Personal-Site/issues"
   },
-  "homepage": "https://github.com/IA-n7/Personal-Site#readme"
+  "homepage": "https://github.com/IA-n7/Personal-Site#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "normalize.css": "^8.0.1",
+    "uuid": "^8.3.2"
+  }
 }
