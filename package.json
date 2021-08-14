@@ -2,7 +2,7 @@
   "name": "ianland",
   "version": "1.0.0",
   "description": "Personal website for Ian Bradley",
-  "main": "server.js",
+  "main": "express_server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

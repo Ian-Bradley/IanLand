@@ -4,6 +4,7 @@ require('dotenv').config();
 
 const PORT           = process.env.PORT || 8080;
 const ENV            = process.env.ENV  || "development";
+
 const express        = require("express");
 const bodyParser     = require("body-parser");
 const app            = express();
@@ -58,8 +59,27 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
   req.flash("success", "Testing");
   if(req.session) console.log(req.session);
-  // res.send("test");
   res.render("index");
+});
+
+// Ian
+app.get("/ian", (req, res) => {
+  res.render("ian");
+});
+
+// Chat
+app.get("/chat", (req, res) => {
+  res.render("chat");
+});
+
+// Dune
+app.get("/dune", (req, res) => {
+  res.render("dune");
+});
+
+// Rain
+app.get("/rain", (req, res) => {
+  res.render("rain");
 });
 
 // Cliq-it
@@ -68,6 +88,11 @@ app.get("/cliq_it", (req, res) => {
   // };
   res.render("cliq_it");
   // res.render("polls_index", templateData);
+});
+
+// Sorting
+app.get("/sorting", (req, res) => {
+  res.render("sorting");
 });
 
 /*======================================
