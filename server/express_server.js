@@ -17,16 +17,20 @@ const { v4: uuidv4 } = require('uuid');
 // const MONGODB_URI    = "mongodb://localhost:27017/tweeter";
 // const bcrypt         = require('bcryptjs');
 
-/* EXPRESS CONFIG */
+/*======================================
+    EXPRESS CONFIGURATION
+========================================*/
+
 app.set("view engine", "ejs");
 app.set('trust proxy', 1);
+
+/* MIDDLEWARES */
 const middlewares = [
   morgan('dev'),
   methodOverride("_method"),
   express.static('public'),
   bodyParser.urlencoded({ extended: true }),
   // cookieParser(),
-  express.static("public"),
   session({
     genid: function(req) {
       return uuidv4();
@@ -44,6 +48,7 @@ const middlewares = [
 app.use(middlewares);
 
 /* ROUTES */
+// const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 // app.use("/tweets", tweetsRoutes);
 
 /* LISTENING */
@@ -55,16 +60,16 @@ app.listen(PORT, () => {
     PAGES
 ========================================*/
 
-// Home
+// Index/Root
 app.get("/", (req, res) => {
-  req.flash("success", "Testing");
-  if(req.session) console.log(req.session);
+  // req.flash("success", "Testing");
+  // if(req.session) console.log(req.session);
   res.render("index");
 });
 
-// Ian
-app.get("/ian", (req, res) => {
-  res.render("ian");
+// Home
+app.get("/home", (req, res) => {
+  res.render("home");
 });
 
 // Chat
@@ -84,8 +89,6 @@ app.get("/rain", (req, res) => {
 
 // Cliq-it
 app.get("/cliq_it", (req, res) => {
-  // let templateData = {
-  // };
   res.render("cliq_it");
   // res.render("polls_index", templateData);
 });
@@ -94,6 +97,11 @@ app.get("/cliq_it", (req, res) => {
 app.get("/sorting", (req, res) => {
   res.render("sorting");
 });
+
+// Codenames
+// app.get("/codenames", (req, res) => {
+//   res.render("codenames");
+// });
 
 /*======================================
     OPERATIONS

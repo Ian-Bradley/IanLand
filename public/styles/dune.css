@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Neon Club Music';
+    src: url('../fonts/neon_club_music/NEON_CLUB_MUSIC.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body.dune {
+    font-family: 'Neon Club Music';
+}
+
+body.dune .bg-dune {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body.dune .bg-dune-1 { background-image: url('../images/dune/dune_1.jpg'); }
+body.dune .bg-dune-2 { background-image: url('../images/dune/dune_2.jpg'); }
+body.dune .bg-dune-3 { background-image: url('../images/dune/dune_3.jpg'); }
+body.dune .bg-dune-4 { background-image: url('../images/dune/dune_4.jpg'); }
